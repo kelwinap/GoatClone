@@ -24,15 +24,16 @@ const DATA = [
     },
 ];
 
-function GridSneakers() {
+function GridSneakers(props: any) {
+
+    
 
     return (
-        <FlatList
-            style={{ marginTop: 10 }}
+        <FlatList            
             data={DATA}
             renderItem={({ item }) => <CardSneaker discount={item.discount} />}
             keyExtractor={item => item.id}
-            numColumns={2}
+            numColumns={2}            
         />
     )
 }
